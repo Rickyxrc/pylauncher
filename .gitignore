@@ -1,0 +1,10 @@
+# nix build res
+result
+
+# direnv
+.direnv
+
+# pycache
+__pycache__
+*.pyc
+
