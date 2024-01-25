@@ -22,7 +22,7 @@
             };
         };
         packages."${system}".default = pkgs.writeShellApplication {
-            name = "lchr";
+            name = "pylauncher";
             runtimeInputs =
                 [ app.dependencyEnv ];
             text = ''
