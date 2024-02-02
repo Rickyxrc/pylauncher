@@ -11,15 +11,17 @@ def rnd():
     return ''.join([random.choice(charset) for _ in range(8)])
 
 console = Console()
-console.log("hello!")
+# console.log("hello!")
 
 homePath = pathlib.Path(os.path.expanduser("~"))
 dirPath = homePath / "active"
+archivePath = homePath / "archive"
 
 files = [ str(dirPath / f) for f in os.listdir(dirPath) ] + \
+    [ str(archivePath / f) for f in os.listdir(archivePath) ] + \
     [ str(homePath / "nix-config") ]
 
-console.print(files)
+# console.print(files)
 
 # result = survey.routines.select("project to open: ", options=files)
 Terminal = TerminalMenu(files)
